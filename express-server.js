@@ -16,6 +16,8 @@ const router = express.Router();
 const path = require('path');
 const bodyParser = require('body-parser');
 
+// Setup /demo endpoint to direct to static/index.html
+app.use('/demo', express.static(path.join(__dirname, 'static')));
 app.use(bodyParser.json());
 app.set('json spaces', 2);
 
